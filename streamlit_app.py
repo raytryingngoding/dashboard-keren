@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
 import numpy as np # Buat bikin data contoh dan prediksi contoh
@@ -63,11 +64,11 @@ def make_mock_prediction(input_features):
 # --- Sidebar untuk Navigasi Halaman ---
 st.sidebar.title("Menu Navigasi 🧭")
 pilihan_halaman = st.sidebar.radio(
-    "Mau lihat halaman apa, sayang?",
+    "Mau lihat halaman apa, bang?",
     ["🏠 Halaman Awal (EDA)", "🧠 Hasil Model", "🔮 Formulir Prediksi"]
 )
 st.sidebar.markdown("---") # Garis pemisah
-st.sidebar.info("Dashboard ini dibuat dengan penuh cinta oleh kamu! ❤️")
+st.sidebar.info("Dashboard ini dibuat dengan penuh cinta oleh Kelompok 11! ❤️")
 
 
 # --- Konten Halaman Utama (berdasarkan pilihan di sidebar) ---
@@ -115,7 +116,7 @@ elif pilihan_halaman == "🧠 Hasil Model":
     # Contoh: model = joblib.load('model_churn_kerenku.pkl')
     # Lalu hitung akurasi, presisi, recall, dll. dari data test.
     
-    st.warning("Disclaimer: Metrik dan fitur penting di bawah ini adalah CONTOH dan bukan dari model yang sesungguhnya ya, sayang! 😉")
+    st.warning("Disclaimer: Metrik dan fitur penting di bawah ini adalah CONTOH dan bukan dari model yang sesungguhnya ya, bang!😉")
 
     metrik_model, fitur_penting = get_mock_model_results()
 
@@ -147,7 +148,7 @@ elif pilihan_halaman == "🔮 Formulir Prediksi":
         st.subheader("Masukkan Detail Pelanggan:")
 
         # Bikin input field sesuai fitur yang dipake modelmu
-        # Ini cuma contoh ya, sayang!
+        # Ini cuma contoh ya, bang!
         input_lama_berlangganan = st.slider(
             label="Lama Berlangganan (Bulan):", 
             min_value=0, max_value=100, value=12, step=1,
@@ -206,8 +207,9 @@ elif pilihan_halaman == "🔮 Formulir Prediksi":
 
 # --- (Opsional) Footer biar makin kece ---
 st.markdown("---")
-st.markdown("© 2025 Dibuat dengan Penuh Semangat oleh Kamu & Streamlit! | Happy Coding! 🔥💻")
+st.markdown("© 2025 Dibuat dengan Penuh Semangat oleh Kelompok 11! | Happy Coding! 🔥💻")
 
 # Jangan lupa import library yang dibutuhkan di bagian paling atas file ya!
 # Misalnya: import matplotlib.pyplot as plt (kalau pake matplotlib)
 #           import joblib (kalau mau load model dari file .pkl)
+
