@@ -80,8 +80,8 @@ if pilihan_halaman == "🏠 Halaman Awal (EDA)":
     # Load data contoh
     df_pelanggan = load_example_data()
 
-    st.subheader("Cuplikan Dataset Pelanggan (5 Baris Pertama):")
-    st.dataframe(df_pelanggan.head())
+    st.subheader("Dataset Pelanggan:")
+    st.dataframe(df_pelanggan)
 
     st.subheader("Statistik Deskriptif:")
     st.write(df_pelanggan.describe())
